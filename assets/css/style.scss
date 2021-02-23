@@ -1,0 +1,59 @@
+// START:: SASS VARIABLES
+$mainColor: #398D82;
+// END:: SASS VARIABLES
+
+// START:: SASS MIXINS
+@mixin boxSizing() {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin backgroundSize() {
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin borderRadius($br) {
+  -moz-border-radius: $br;
+  -webkit-border-radius: $br;
+  -o-border-radius: $br;
+  border-radius: $br;
+}
+
+@mixin boxShadow($bs1, $bs2, $bs3, $bs4, $color) {
+  -moz-box-shadow: $bs1 $bs2 $bs3 $bs4 $color;
+  -webkit-box-shadow: $bs1 $bs2 $bs3 $bs4 $color;
+  -o-box-shadow: $bs1 $bs2 $bs3 $bs4 $color;
+  box-shadow: $bs1 $bs2 $bs3 $bs4 $color;
+}
+// END:: SASS MIXINS
+
+// START:: GLOBAL STYLES
+* {
+  @include boxSizing();
+}
+// END:: GLOBAL STYLES
+
+.page-content {
+  height: 100vh;
+  background: url('../pics/bg.svg');
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include backgroundSize();
+  .landing-card {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    @include borderRadius(15px);
+    @include boxShadow(0, 0, 15px, 10px, #3e3e3e)
+  }
+}
