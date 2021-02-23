@@ -36,6 +36,10 @@ $mainColor: #398D82;
 * {
   @include boxSizing();
 }
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
 // END:: GLOBAL STYLES
 
 .page-content {
@@ -49,11 +53,51 @@ $mainColor: #398D82;
   .landing-card {
     width: 90%;
     height: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include borderRadius(15px);
-    @include boxShadow(0, 0, 15px, 10px, #3e3e3e)
+    @include boxShadow(0, 0, 15px, 10px, #3e3e3e);
+    position: relative;
+
+    .upper-bar {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 20px;
+      color: #565656;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px 15px 0 0;
+      img {
+        max-width: 120px;
+      }
+    }
+
+    .landing-pic {
+      img {
+        width: 100%;
+        height: 500px;
+      }
+    }
+    
+    .landing-text {
+      h2 {
+        color: $mainColor;
+      }
+      p {
+        font-size: 1.5;
+        text-align: start;
+        color: #414141;
+      }
+      .row {
+        img {
+          max-width: 200px;
+        }
+      }
+    }
   }
 }
