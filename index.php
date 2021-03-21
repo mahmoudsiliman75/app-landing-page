@@ -25,10 +25,10 @@
               Eveniet possimus saepe dolor. 
             </p>
             <div class="row">
-              <div class="col-12 col-md-6">
+              <div class="col-6">
                 <img src="assets/pics/google-play.png">
               </div>
-              <div class="col-12 col-md-6">
+              <div class="col-6">
                 <img src="assets/pics/app-store.png">
               </div>
             </div>
