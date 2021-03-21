@@ -26,10 +26,14 @@
             </p>
             <div class="row">
               <div class="col-6">
-                <img src="assets/pics/google-play.png">
+                <a href="#">
+                  <img src="assets/pics/google-play.png">
+                </a>
               </div>
               <div class="col-6">
-                <img src="assets/pics/app-store.png">
+                <a href="#">
+                  <img src="assets/pics/app-store.png">
+                </a>
               </div>
             </div>
           </div>
